@@ -886,13 +886,13 @@
 
           if (type === 'image') {
             frame.hidden = true;
-            frame.src = '';
+            frame.removeAttribute('src');
             image.hidden = false;
             image.src = url;
             image.alt = label;
           } else {
             image.hidden = true;
-            image.src = '';
+            image.removeAttribute('src');
             frame.hidden = false;
             frame.src = url + '#toolbar=0&navpanes=0&scrollbar=0';
           }
@@ -904,9 +904,9 @@
 
       function closeModal() {
         modal.classList.remove('is-open');
-        frame.src = '';
+        frame.removeAttribute('src');
         frame.hidden = true;
-        image.src = '';
+        image.removeAttribute('src');
         image.hidden = true;
       }
 
